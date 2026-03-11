@@ -164,6 +164,7 @@ strong { font-weight: 600; }
 .navbar-toggler {
   border: 1px solid rgba(255,255,255,0.3);
   padding: 6px 10px;
+  margin-left: auto; /* push the hamburger to the right on mobile */
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -767,7 +768,7 @@ strong { font-weight: 600; }
   margin: 0;
 }
 
-/* ==============================================
+/* =============================================
    CONTACT
    ============================================== */
 .contact-form {
@@ -861,7 +862,7 @@ strong { font-weight: 600; }
 .social-icon.facebook:hover  { background: #1877f2; border-color: #1877f2; }
 .social-icon.instagram:hover { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color: transparent; }
 
-/* ==============================================
+/* =============================================
    FOOTER
    ============================================== */
 .site-footer {
@@ -935,7 +936,7 @@ strong { font-weight: 600; }
   margin: 0;
 }
 
-/* ==============================================
+/* =============================================
    SUBSECTION HEADING
    ============================================== */
 .subsection-heading {
@@ -958,7 +959,7 @@ strong { font-weight: 600; }
   margin: 8px auto 0;
 }
 
-/* ==============================================
+/* =============================================
    PROFITABLE
    ============================================== */
 .profit-card {
@@ -1006,7 +1007,7 @@ strong { font-weight: 600; }
   margin: 0;
 }
 
-/* ==============================================
+/* =============================================
    SWOT
    ============================================== */
 .swot-card {
@@ -1086,7 +1087,7 @@ strong { font-weight: 600; }
 .swot-opportunities.swot-list li i { color: var(--accent-yellow); }
 .swot-threats      .swot-list li i { color: var(--accent-orange); }
 
-/* ==============================================
+/* =============================================
    COMPETITION
    ============================================== */
 .competition-card {
@@ -1134,7 +1135,7 @@ strong { font-weight: 600; }
   margin: 0;
 }
 
-/* ==============================================
+/* =============================================
    CULTURE PILLARS
    ============================================== */
 .culture-pillar {
@@ -1174,7 +1175,7 @@ strong { font-weight: 600; }
   font-weight: 600;
 }
 
-/* ==============================================
+/* =============================================
    ANIMATIONS
    ============================================== */
 @keyframes fadeUp {
@@ -1197,9 +1198,19 @@ strong { font-weight: 600; }
   transform: translateY(0);
 }
 
-/* ==============================================
+/* =============================================
    RESPONSIVE
    ============================================== */
+@media (max-width: 991px) {
+  /* ensure navbar children can be positioned reliably */
+  #mainNav .container { display: flex; align-items: center; gap: 12px; }
+  /* place toggler at the far left on mobile using flex order */
+  #mainNav .navbar-toggler { order: -1 !important; margin-left: 0 !important; margin-right: 0 !important; }
+  /* make sure the collapsible nav sits after brand */
+  #mainNav .navbar-brand { order: 0; }
+  #mainNav .collapse { order: 1; }
+}
+
 @media (max-width: 991px) {
   .title-bold { letter-spacing: -2px; }
   .about-stats { gap: 20px; }
@@ -1230,7 +1241,7 @@ strong { font-weight: 600; }
   .contact-form { padding: 24px 16px; }
 }
 
-/* ==============================================
+/* =============================================
    PROFITABILITY CARDS
    ============================================== */
 .profit-card {
@@ -1269,7 +1280,7 @@ strong { font-weight: 600; }
 .profit-card h5 { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
 .profit-card p  { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
 
-/* ==============================================
+/* =============================================
    MARKETING CARDS (Light version)
    ============================================== */
 .mkt-card-light {
@@ -1308,7 +1319,7 @@ strong { font-weight: 600; }
 .mkt-card-light h5 { font-size: 1.05rem; font-weight: 700; color: var(--jungle-dark); margin-bottom: 10px; }
 .mkt-card-light p  { font-size: 0.88rem; color: #607060; line-height: 1.7; margin: 0; }
 
-/* ==============================================
+/* =============================================
    SWOT ANALYSIS
    ============================================== */
 .swot-card {
@@ -1352,7 +1363,7 @@ strong { font-weight: 600; }
 .swot-up    { color: var(--accent-yellow); }
 .swot-x     { color: var(--accent-orange); }
 
-/* ==============================================
+/* =============================================
    VALUES CARDS
    ============================================== */
 .value-card {
@@ -1395,7 +1406,7 @@ strong { font-weight: 600; }
 .value-card h5 { font-size: 1.05rem; font-weight: 700; color: var(--jungle-dark); margin-bottom: 10px; }
 .value-card p  { font-size: 0.88rem; color: #607060; line-height: 1.7; margin: 0; }
 
-/* ==============================================
+/* =============================================
    COMPETITION
    ============================================== */
 .comp-card {
@@ -1453,7 +1464,7 @@ strong { font-weight: 600; }
 .edge-item:hover { background: rgba(255,255,255,0.08); border-color: rgba(249,115,22,0.3); color: #fff; }
 .edge-item i { font-size: 1rem; flex-shrink: 0; }
 
-/* ==============================================
+/* =============================================
    CONTACT (Light Version)
    ============================================== */
 .contact-form-light {
