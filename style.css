@@ -191,7 +191,7 @@ strong { font-weight: 600; }
   display: flex;
   align-items: center;
   background:
-    url('logo.png')
+    url('junglecoverpage.jpg')
     center center / cover no-repeat;
   overflow: hidden;
 }
@@ -1327,10 +1327,27 @@ strong { font-weight: 600; }
   width: 66px; height: 66px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.5rem; margin: 0 auto 20px; transition: var(--transition);
+  color: #fff;
 }
-.mkt-icon-light.tiktok    { background: rgba(0,0,0,0.07); color: #000; }
-.mkt-icon-light.facebook  { background: rgba(24,119,242,0.1); color: #1877f2; }
-.mkt-icon-light.instagram { background: rgba(228,64,95,0.1); color: #e4405f; }
+..mkt-icon-light a {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.mkt-icon-light i {
+  color: inherit;
+}
+.mkt-icon-light.tiktok    { background: #000; }
+.mkt-icon-light.tiktok i { color: #fff; }
+.mkt-icon-light.facebook  { background: #1877f2; }
+.mkt-icon-light.facebook i { color: #fff; }
+.mkt-icon-light.instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.mkt-icon-light.instagram i { color: #fff; }
 .mkt-icon-light.booth     { background: rgba(46,125,79,0.12); color: var(--jungle-bright); }
 .mkt-card-light:hover .mkt-icon-light { transform: scale(1.12) rotate(8deg); }
 .mkt-card-light h5 { font-size: 1.05rem; font-weight: 700; color: var(--jungle-dark); margin-bottom: 10px; }
