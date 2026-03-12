@@ -113,6 +113,13 @@ strong { font-weight: 600; }
   padding: 12px 0;
   box-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
+/* Add dark background when navbar collapse is open */
+#mainNav .navbar-collapse.show {
+  background: rgba(13,43,26,0.97);
+}
+#mainNav:not(.scrolled) .navbar-collapse.show {
+  background: rgba(13,43,26,0.97) !important;
+}
 .navbar-brand {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
