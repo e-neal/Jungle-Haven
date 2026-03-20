@@ -1038,6 +1038,25 @@ strong { font-weight: 600; }
   line-height: 1.7;
   margin: 0;
 }
+.role-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin: 12px 0 16px 0;
+  box-shadow: 0 4px 15px rgba(249,115,22,0.35);
+  transition: var(--transition);
+  display: inline-block;
+}
+.profit-card:hover .role-badge {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(249,115,22,0.45);
+}
 
 /* =============================================
    SWOT
