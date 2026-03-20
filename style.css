@@ -575,6 +575,7 @@ strong { font-weight: 600; }
   border-color: rgba(46,125,79,0.3);
 }
 .target-icon {
+  position: relative;
   width: 64px;
   height: 64px;
   background: linear-gradient(135deg, var(--jungle-mid), var(--jungle-bright));
@@ -586,6 +587,20 @@ strong { font-weight: 600; }
   color: #fff;
   margin: 0 auto 20px;
   transition: var(--transition);
+}
+.price-badge {
+  position: absolute;
+  left: -50px;
+  top: -5px;
+  background: var(--jungle-bright);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-dark);
+  white-space: nowrap;
+  z-index: 10;
 }
 .target-card:hover .target-icon {
   transform: scale(1.12) rotate(-5deg);
